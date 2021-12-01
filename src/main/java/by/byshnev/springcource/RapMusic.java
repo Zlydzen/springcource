@@ -1,9 +1,9 @@
 package by.byshnev.springcource;
 
-public class RockMusic implements Music {
+public class RapMusic implements Music {
 
     @Override
     public String getSong() {
-        return "Queen - We Will Rock You";
+        return "2Pac - Changes";
     }
 }
