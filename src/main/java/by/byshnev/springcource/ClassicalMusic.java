@@ -1,5 +1,8 @@
 package by.byshnev.springcource;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ClassicalMusic implements Music {
     private ClassicalMusic() {
     }                              // can't to create new object using "new"
