@@ -1,6 +1,12 @@
 package by.byshnev.springcource;
 
 public class ClassicalMusic implements Music {
+    private ClassicalMusic() {
+    }                              // can't to create new object using "new"
+
+    public static ClassicalMusic getClassicalMusic() {       //factory-method
+        return new ClassicalMusic();
+    }
 
     public void doMyInit() {
         System.out.println("Initialization has been started....");

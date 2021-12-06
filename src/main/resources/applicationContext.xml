@@ -12,7 +12,8 @@
     <bean id="musicBean"
           class="by.byshnev.springcource.ClassicalMusic"
           init-method="doMyInit"
-          destroy-method="doDestroy">
+          destroy-method="doDestroy"
+          factory-method="getClassicalMusic">
     </bean>
 
 
