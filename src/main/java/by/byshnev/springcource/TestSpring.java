@@ -9,7 +9,7 @@ public class TestSpring {
         );
 
 //        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-//        musicPlayer.
+//        musicPlayer.playMusic();
 
         Computer computer = context.getBean("computer", Computer.class);
         System.out.println(computer);
