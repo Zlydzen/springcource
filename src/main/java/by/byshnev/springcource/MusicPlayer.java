@@ -24,11 +24,11 @@ public class MusicPlayer {
 
     public String playMusic(Genres genres) {
         if (genres.equals(Genres.CLASSICAL)) {
-            return "Playing: " + music1.getSong();
+            return "Playing: " + music1.getSong().get((int) (music1.getSong().size() * Math.random()));
         }
         if (genres.equals(Genres.RAP)) {
-            return "Playing: " + music3.getSong();
+            return "Playing: " + music3.getSong().get((int) (music3.getSong().size() * Math.random()));
         }
-    return "Playing: " + music2.getSong();
+        return "Playing: " + music2.getSong().get((int) (music2.getSong().size() * Math.random()));
     }
 }
