@@ -15,8 +15,4 @@ public class Computer {
         this.musicPlayer = musicPlayer;
     }
 
-    @Override
-    public String toString() {
-        return "Computer " + id + " " + musicPlayer.playMusic(Genres.ROCK);
-    }
 }

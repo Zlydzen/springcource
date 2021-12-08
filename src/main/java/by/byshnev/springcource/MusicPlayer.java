@@ -22,13 +22,15 @@ public class MusicPlayer {
         this.music3 = music3;
     }
 
-    public String playMusic(Genres genres) {
+    public void playMusic(Genres genres) {
         if (genres.equals(Genres.CLASSICAL)) {
-            return "Playing: " + music1.getSong().get((int) (music1.getSong().size() * Math.random()));
+            System.out.println("Playing: " + music1.getSong().get((int) (music1.getSong().size() * Math.random())));
         }
         if (genres.equals(Genres.RAP)) {
-            return "Playing: " + music3.getSong().get((int) (music3.getSong().size() * Math.random()));
+            System.out.println("Playing: " + music3.getSong().get((int) (music3.getSong().size() * Math.random())));
         }
-        return "Playing: " + music2.getSong().get((int) (music2.getSong().size() * Math.random()));
+        if (genres.equals(Genres.ROCK)){
+            System.out.println("Playing: " + music2.getSong().get((int) (music2.getSong().size() * Math.random())));
+        }
     }
 }
