@@ -3,10 +3,16 @@ package by.byshnev.springcource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
+
+    @Value("${musicPlayer.name}")
+    private String name;
+    @Value("${musicPlayer.volume}")
+    private int volume;
 
     private Music music1;
     private Music music2;
@@ -22,14 +28,22 @@ public class MusicPlayer {
         this.music3 = music3;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
     public void playMusic(Genres genres) {
-        if (genres.equals(Genres.CLASSICAL)) {
+        if (genres == Genres.CLASSICAL) {
             System.out.println("Playing: " + music1.getSong().get((int) (music1.getSong().size() * Math.random())));
         }
-        if (genres.equals(Genres.RAP)) {
+        if (genres == Genres.RAP) {
             System.out.println("Playing: " + music3.getSong().get((int) (music3.getSong().size() * Math.random())));
         }
-        if (genres.equals(Genres.ROCK)){
+        if (genres == Genres.ROCK){
             System.out.println("Playing: " + music2.getSong().get((int) (music2.getSong().size() * Math.random())));
         }
     }
