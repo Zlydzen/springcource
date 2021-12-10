@@ -8,7 +8,6 @@ import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
 public class ClassicalMusic implements Music {
 
     @PostConstruct
@@ -22,12 +21,9 @@ public class ClassicalMusic implements Music {
     }
 
     @Override
-    public List<String> getSong() {
-        List<String> listClassical = new ArrayList<>();
-        listClassical.add("Bach - Takkata & Fuga D.moll");
-        listClassical.add("Rohmaninov - Preludia");
-        listClassical.add("Bethoven - Moon sonata");
-        return listClassical;
+    public String getSong() {
+        return "Bethoven - Moon sonata";
+
     }
 
 }
